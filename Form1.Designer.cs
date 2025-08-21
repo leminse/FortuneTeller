@@ -30,12 +30,12 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.b = new System.Windows.Forms.Button();
-            this.tb = new System.Windows.Forms.TextBox();
-            this.t = new System.Windows.Forms.TextBox();
+            this.btnresult = new System.Windows.Forms.Button();
+            this.tbBirthour = new System.Windows.Forms.TextBox();
+            this.tbBirthday = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.d = new System.Windows.Forms.TextBox();
+            this.tbResult = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -44,9 +44,9 @@
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.t);
-            this.groupBox1.Controls.Add(this.tb);
-            this.groupBox1.Controls.Add(this.b);
+            this.groupBox1.Controls.Add(this.tbBirthday);
+            this.groupBox1.Controls.Add(this.tbBirthour);
+            this.groupBox1.Controls.Add(this.btnresult);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(374, 426);
@@ -56,7 +56,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.d);
+            this.groupBox2.Controls.Add(this.tbResult);
             this.groupBox2.Location = new System.Drawing.Point(392, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(396, 426);
@@ -64,28 +64,28 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "결과 보기";
             // 
-            // b
+            // btnresult
             // 
-            this.b.Location = new System.Drawing.Point(42, 336);
-            this.b.Name = "b";
-            this.b.Size = new System.Drawing.Size(286, 43);
-            this.b.TabIndex = 0;
-            this.b.Text = "결과보기";
-            this.b.UseVisualStyleBackColor = true;
+            this.btnresult.Location = new System.Drawing.Point(42, 336);
+            this.btnresult.Name = "btnresult";
+            this.btnresult.Size = new System.Drawing.Size(286, 43);
+            this.btnresult.TabIndex = 0;
+            this.btnresult.Text = "결과보기";
+            this.btnresult.UseVisualStyleBackColor = true;
             // 
-            // tb
+            // tbBirthour
             // 
-            this.tb.Location = new System.Drawing.Point(64, 208);
-            this.tb.Name = "tb";
-            this.tb.Size = new System.Drawing.Size(231, 21);
-            this.tb.TabIndex = 1;
+            this.tbBirthour.Location = new System.Drawing.Point(64, 208);
+            this.tbBirthour.Name = "tbBirthour";
+            this.tbBirthour.Size = new System.Drawing.Size(231, 21);
+            this.tbBirthour.TabIndex = 1;
             // 
-            // t
+            // tbBirthday
             // 
-            this.t.Location = new System.Drawing.Point(64, 133);
-            this.t.Name = "t";
-            this.t.Size = new System.Drawing.Size(231, 21);
-            this.t.TabIndex = 2;
+            this.tbBirthday.Location = new System.Drawing.Point(64, 133);
+            this.tbBirthday.Name = "tbBirthday";
+            this.tbBirthday.Size = new System.Drawing.Size(231, 21);
+            this.tbBirthday.TabIndex = 2;
             // 
             // label1
             // 
@@ -106,13 +106,13 @@
             this.label2.Text = "태어난 시각(예:3시15분 -> 03)";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // d
+            // tbResult
             // 
-            this.d.Location = new System.Drawing.Point(20, 31);
-            this.d.Multiline = true;
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(354, 374);
-            this.d.TabIndex = 0;
+            this.tbResult.Location = new System.Drawing.Point(20, 31);
+            this.tbResult.Multiline = true;
+            this.tbResult.Name = "tbResult";
+            this.tbResult.Size = new System.Drawing.Size(354, 374);
+            this.tbResult.TabIndex = 0;
             // 
             // Form1
             // 
@@ -137,11 +137,11 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox t;
-        private System.Windows.Forms.TextBox tb;
-        private System.Windows.Forms.Button b;
+        private System.Windows.Forms.TextBox tbBirthday;
+        private System.Windows.Forms.TextBox tbBirthour;
+        private System.Windows.Forms.Button btnresult;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox d;
+        private System.Windows.Forms.TextBox tbResult;
     }
 }
 
