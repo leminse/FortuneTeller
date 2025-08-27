@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace FortuneTeller
 {
     public partial class Form1 : Form
@@ -19,13 +20,21 @@ namespace FortuneTeller
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            InitializeComponent(); 
         }
 
         private void 내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormPstory form = new FormPstory();
-            form.Show();
+            FormPstory form = Application.OpenForms["FormPstory"] as FormPstory;
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                form = new FormPstory();
+                form.Show();
+            }
         }
 
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)

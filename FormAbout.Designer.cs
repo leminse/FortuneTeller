@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(477, 45);
+            this.label1.Location = new System.Drawing.Point(477, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(288, 159);
             this.label1.TabIndex = 1;
