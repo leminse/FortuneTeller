@@ -53,6 +53,13 @@ namespace FortuneTeller
             InitializeComponent(); 
         }
 
+        private string GetFortune()
+        {
+            Random random = new Random();
+            int index = random.Next(0, results.Count);
+            return results[index];
+        }
+
         private void 내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormPstory form = Application.OpenForms["FormPstory"] as FormPstory;
@@ -77,5 +84,6 @@ namespace FortuneTeller
             FormAbout form = new FormAbout();
             form.ShowDialog();
         }
+
     }
 }
