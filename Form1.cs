@@ -105,6 +105,10 @@ namespace FortuneTeller
                 string filename = "history.csv";
                 File.AppendAllText(filename, history + Environment.NewLine);
             }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show($"파일이 없어요 \n {ex.Message}", "파일 없음");
+            }
             catch(UnauthorizedAccessException ex)
             {
                 MessageBox.Show($"권한 없음 오류 발생 \n {ex.Message}", "권한 오류");

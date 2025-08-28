@@ -12,8 +12,12 @@ namespace FortuneTeller
 {
     public partial class FormPstory : Form
     {
-        public FormPstory()
+        List<string> history;
+        Form form;
+
+        public FormPstory(Form1 form)
         {
+            this.form = form;
             InitializeComponent();
         }
     }
