@@ -46,12 +46,6 @@ namespace FortuneTeller
             }
             
         }
- 
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            InitializeComponent(); 
-        }
 
         private string GetFortune()
         {
@@ -69,7 +63,7 @@ namespace FortuneTeller
             }
             else
             {
-                form = new FormPstory();
+                form = new FormPstory(this);
                 form.Show();
             }
         }
@@ -88,7 +82,7 @@ namespace FortuneTeller
         private void btnResult_click(object sender, EventArgs e)
         {
             string birthday = tbBirthday.Text;
-            string birthour = tbBirthour.Text;
+            string birthour = tbBirthhour.Text;
             string result = GetFortune();
             string saju = result.Split('|')[0];
             string message = result.Split('|')[1];
@@ -105,10 +99,6 @@ namespace FortuneTeller
                 string filename = "history.csv";
                 File.AppendAllText(filename, history + Environment.NewLine);
             }
-            catch (FileNotFoundException ex)
-            {
-                MessageBox.Show($"파일이 없어요 \n {ex.Message}", "파일 없음");
-            }
             catch(UnauthorizedAccessException ex)
             {
                 MessageBox.Show($"권한 없음 오류 발생 \n {ex.Message}", "권한 오류");
@@ -117,6 +107,27 @@ namespace FortuneTeller
             {
                 MessageBox.Show($"알 수 없는 오류 발생 \n {ex.Message}", "알 수 없는 오류");
             }
+        }
+
+        public void LoadHistory(string history)
+        {
+            // 19820108 21|사주사주사주사주|뭐시기뭐시기 
+            // -->   [0] 19820108 21 / [1] 사주사주사주사주 / [2] 뭐시기뭐시기
+            string birthday = history.Split('|')[0].Split(' ')[0];
+            string birthhour = history.Split('|')[0].Split(' ')[1];
+            tbBirthday.Text = birthday;
+            tbBirthhour.Text = birthhour;
+
+            string saju = history.Split('|')[1];
+            string message = history.Split('|')[2];
+            tbResult.Text = $"{birthday} {birthhour}{Environment.NewLine}"
+               + $"{saju}{Environment.NewLine}"
+               + $"{message}";
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            InitializeComponent();
         }
     }
 }
